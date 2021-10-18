@@ -44,12 +44,17 @@ function MyApp({ Component, pageProps }) {
       <header id="header" className="fixed-top d-flex align-items-cente">
         <div className="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
           <a href="index.html" className="logo me-auto me-lg-0">
-            <img src="assets/img/logo2.png" alt="logo"  width="55px" height="40px"/>
+            <img
+              src="assets/img/logo2.png"
+              alt="logo"
+              width="55px"
+              height="40px"
+            />
           </a>
 
           <nav id="navbar" className="navbar order-last order-lg-0 mx-center">
             <ul>
-              <Link href="https://cosmoinfinitas-00.firebaseapp.com/">
+              <Link href="https://cosmoinfinitas-00.web.app">
                 <a className="nav-link scrollto ">Home</a>
               </Link>
               <Link href="/">
