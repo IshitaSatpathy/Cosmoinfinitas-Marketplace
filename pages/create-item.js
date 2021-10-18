@@ -78,9 +78,10 @@ export default function CreateItem() {
     await transaction.wait();
     router.push("/");
   }
+  
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-5">
       <div className="w-1/2 flex flex-col pb-12">
         <input
           placeholder="NFT Name"

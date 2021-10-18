@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
       <header id="header" className="fixed-top d-flex align-items-cente">
         <div className="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
           <a href="index.html" className="logo me-auto me-lg-0">
-            <img src="assets/img/Logo.png" alt="logo" className="img-fluid" />
+            <img src="assets/img/logo2.png" alt="logo"  width="55px" height="40px"/>
           </a>
 
           <nav id="navbar" className="navbar order-last order-lg-0 mx-center">
@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }) {
           </nav>
         </div>
       </header>
-      <Header />
+      {/* <Header /> */}
       <Component {...pageProps} />
       <Script src="assets/vendor/jquery.easing/jquery.easing.min.js" />
       <Script src="assets/vendor/aos/aos.js" />
