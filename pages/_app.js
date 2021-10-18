@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
         <div className="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
           <a href="index.html" className="logo me-auto me-lg-0">
             <img
-              src="assets/img/logo2.png"
+              src="assets/img/logo-main-nav.png"
               alt="logo"
               width="55px"
               height="40px"
