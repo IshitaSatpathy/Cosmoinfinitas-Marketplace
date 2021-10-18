@@ -78,6 +78,7 @@ export default function CreateItem() {
     await transaction.wait();
     router.push("/");
   }
+  
 
   return (
     <div className="flex justify-center mt-5">
@@ -109,7 +110,7 @@ export default function CreateItem() {
         {fileUrl && <img className="rounded mt-4" width="350" src={fileUrl} />}
         <button
           onClick={createMarket}
-          className="font-bold mt-4 bg-blue-600 text-white rounded p-4 shadow-lg"
+          className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg"
         >
           Create Cosmo NFT
         </button>

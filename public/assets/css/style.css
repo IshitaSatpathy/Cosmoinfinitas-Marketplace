@@ -208,10 +208,6 @@ h1 {
   max-height: 40px;
 }
 
-.grid .grid-cols-1 {
-  margin-top: 15px;
-}
-
 /*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
@@ -459,7 +455,7 @@ h1 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background: url("../img/bg-1.png") top center;
   background-size: cover;
   position: relative;
@@ -505,6 +501,9 @@ h1 {
   font-size: 22px;
 }
 
+#hero .col-lg-8 {
+  padding-left: 15px !important;
+}
 #hero .btns {
   margin-top: 30px;
 }

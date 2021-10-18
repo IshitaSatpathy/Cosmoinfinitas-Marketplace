@@ -8,11 +8,11 @@ import { nftaddress, nftmarketAddress } from "../config";
 import NFT from "../artifacts/contracts/NFT.sol/NFT.json";
 import Market from "../artifacts/contracts/NFTMarket.sol/NFTMarket.json";
 import { withRouter } from "next/router";
-const s = {
-  color: "white",
-  paddingTop: "350px",
-  textAlign: "center",
-};
+const s={
+  color:'white',
+  paddingTop:'350px',
+  textAlign:'center'
+}
 
 export default function Home() {
   const [nfts, setNfts] = useState([]);
@@ -79,7 +79,7 @@ export default function Home() {
   }
   if (loadingState === "loaded" && !nfts.length)
     return (
-      <h1 className="mt-50 py-50 text-3xl text-gray-600" style={s}>
+      <h1 className="mt-50 py-50 text-3xl text-gray-600" style={s} >
         No items in marketplace
       </h1>
     );
@@ -106,7 +106,7 @@ export default function Home() {
                   {nft.price} Eth
                 </p>
                 <button
-                  className="w-full bg-blue-500 text-white font-bold py-2 px-12 rounded"
+                  className="w-full bg-pink-500 text-white font-bold py-2 px-12 rounded"
                   onClick={() => buyNft(nft)}
                 >
                   Buy
