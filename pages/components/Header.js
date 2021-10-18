@@ -6,8 +6,8 @@ const Header = () => {
       <section id="hero" className="d-flex align-items-center">
         <div
           className="container position-relative text-center text-lg-start"
-          data-aos="zoom-in"
-          data-aos-delay="100"
+          // data-aos="zoom-in"
+          // data-aos-delay="100"
         >
           <div className="row">
             <div className="col-lg-8">
