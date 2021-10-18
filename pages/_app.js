@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps }) {
           </nav>
         </div>
       </header>
-      {/* <Header /> */}
+      <Header />
       <Component {...pageProps} />
       <Script src="assets/vendor/jquery.easing/jquery.easing.min.js" />
       <Script src="assets/vendor/aos/aos.js" />
