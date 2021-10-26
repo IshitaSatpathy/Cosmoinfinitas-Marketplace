@@ -10,7 +10,7 @@ module.exports = {
       chainId: 1337,
     },
     rinkeby: {
-      url: "https://rinkeby.infura.io/v3/4908efc2319c407db05acfa06154668b",
+      url: "https://rinkeby.infura.io/v3/61c239f5a0a2471a9964f7c2d97392ba",
       accounts: [privateKey],
     },
     mainnet: {
