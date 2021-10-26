@@ -4,6 +4,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-image: url("../img/bg-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   /* background-color: #24282e; */
   color: #fff;
 }
@@ -456,7 +458,7 @@ h1 {
 #hero {
   width: 100%;
   height: 50vh;
-  background: url("../img/bg-1.png") top center;
+  background: url("../img/bg-bg.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
