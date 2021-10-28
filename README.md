@@ -1,9 +1,9 @@
-This is the CosmoInfinitas Marketplace to buy and sell ingame item from the Cosmo Metaverse. Currently in Development Stage and Deployed on Rinkeby Testnet,Binance Testnet. To get started you just have to follow few simple steps. 
+# This is the CosmoInfinitas Marketplace to buy and sell ingame item from the Cosmo Metaverse. Currently in Development Stage and Deployed on Rinkeby Testnet,Binance Testnet. To get started you just have to follow few simple steps. 
 
 1. Clone this Project.
 2. Change the Directory to CosmoInfinitas-Marketplace Folder.
-3. # npm install       //to install all the dependencies
-4. # npm run dev       //to run the website using local host
+3. npm install       //to install all the dependencies
+4. npm run dev       //to run the website using local host
 5. Install Metamask Extension from Web Store of your browser. // Follow this link to get started with Metamask https://blog.wetrust.io/how-to-install-and-use-metamask-7210720ca047
 6. Change the Network to Rinkeby Testnet and buy some Testnet Ether from Rinkeby faucet. https://faucet.rinkeby.io/  //Link to get Testnet Ethers.
 7. Click on the Marketplace Button from the Website Nav bar.
