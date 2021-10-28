@@ -1,6 +1,7 @@
-# This is the CosmoInfinitas Marketplace to buy and sell ingame item from the Cosmo Metaverse. Currently in Development Stage and Deployed on Rinkeby Testnet,Binance Testnet. To get started you just have to follow few simple steps. 
+# CosmoInfinitas Marketplace 
+A Marketplace to buy and sell ingame item from the Cosmo Metaverse. Currently in Development Stage and Deployed on Rinkeby Testnet and Binance Testnet. To get started you just have to follow few simple steps. 
 
-1. Clone this Project.
+1. Clone this Project. //This Repo will only work with Rinkeby Testnet
 2. Change the Directory to CosmoInfinitas-Marketplace Folder.
 3. npm install       //to install all the dependencies
 4. npm run dev       //to run the website using local host
