@@ -14,6 +14,83 @@ const s = {
   textAlign: "center",
 };
 
+function LikeBtn({likeCount}) {
+  const [checked, setChecked] = useState(false);
+  return (
+    <div className="flex items-center">
+                    
+              
+      <input type="checkbox" className={`checkbox`} checked={checked} />
+      <label for="checkbox">
+        <svg
+          id="heart-svg"
+          viewBox="467 392 58 57"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="Group"
+            fill="none"
+            fill-rule="evenodd"
+            transform="translate(467 392)"
+          >
+            <path
+              d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
+              id="heart"
+              fill="#AAB8C2"
+              onClick={() => {  setChecked(!checked) }}
+            />
+            <circle
+              id="main-circ"
+              fill="#E2264D"
+              opacity="0"
+              cx="29.5"
+              cy="29.5"
+              r="1.5"
+              onClick={() => {  setChecked(!checked) }}
+            />
+
+            <g id="grp7" opacity="0" transform="translate(7 6)">
+              <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2" />
+              <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2" />
+            </g>
+
+            <g id="grp6" opacity="0" transform="translate(0 28)">
+              <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2" />
+              <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2" />
+            </g>
+
+            <g id="grp3" opacity="0" transform="translate(52 28)">
+              <circle id="oval2" fill="#9CD8C3" cx="2" cy="7" r="2" />
+              <circle id="oval1" fill="#8CE8C3" cx="4" cy="2" r="2" />
+            </g>
+
+            <g id="grp2" opacity="0" transform="translate(44 6)">
+              <circle id="oval2" fill="#CC8EF5" cx="5" cy="6" r="2" />
+              <circle id="oval1" fill="#CC8EF5" cx="2" cy="2" r="2" />
+            </g>
+
+            <g id="grp5" opacity="0" transform="translate(14 50)">
+              <circle id="oval1" fill="#91D2FA" cx="6" cy="5" r="2" />
+              <circle id="oval2" fill="#91D2FA" cx="2" cy="2" r="2" />
+            </g>
+
+            <g id="grp4" opacity="0" transform="translate(35 50)">
+              <circle id="oval1" fill="#F48EA7" cx="6" cy="5" r="2" />
+              <circle id="oval2" fill="#F48EA7" cx="2" cy="2" r="2" />
+            </g>
+
+            <g id="grp1" opacity="0" transform="translate(24)">
+              <circle id="oval1" fill="#9FC7FA" cx="2.5" cy="3" r="2" />
+              <circle id="oval2" fill="#9FC7FA" cx="7.5" cy="2" r="2" />
+            </g>
+          </g>
+        </svg>
+      </label>
+      <span className="ml-1 lg:text-xl ">{checked ? likeCount + 1 : likeCount}</span>
+    </div>
+  );
+}
+
 export default function Home() {
   const [nfts, setNfts] = useState([]);
   const [loadingState, setLoadingState] = useState("not-loaded");
@@ -32,6 +109,9 @@ export default function Home() {
       provider
     );
     const data = await marketContract.fetchMarketItems();
+    function heart() {
+      document.getElementsByClassName("heartx").style.color = "red";
+    }
 
     /*
      *  map over items returned from smart contract and format
@@ -74,9 +154,11 @@ export default function Home() {
         value: price,
       }
     );
+
     await transaction.wait();
     loadNFTs();
   }
+
   if (loadingState === "loaded" && !nfts.length)
     return (
       <h1 className="mt-50 py-50 text-3xl text-gray-600" style={s}>
@@ -90,11 +172,11 @@ export default function Home() {
           {nfts.map((nft, i) => (
             <div
               key={i}
-              className="bg-white rounded-md overflow-hidden relative shadow-md transform transition duration-500 hover:scale-110"
+              className="bg-gray-800 rounded-md overflow-hidden relative shadow-md transform transition duration-500 hover:scale-110"
             >
               <div>
                 <img
-                  className="w-full max-h-55 object-fill"
+                  className="w-full h-48 object-fill"
                   src={nft.image}
                   alt="Recipe Title"
                 />
@@ -107,39 +189,26 @@ export default function Home() {
                   </h3>
                 </div>
                 <div className="flex justify-between mt-2 mb-4 text-gray-500">
-                  <div className="flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 border-red-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                      />
-                    </svg>
-                    <span className="ml-1 lg:text-xl ">0</span>
-                  </div>
+                  <LikeBtn likeCount={ 0}/>
+                  
 
-                  <div className="flex items-center">
-                    <svg
-                      xmlns="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
-                      className="h-5 w-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                    </svg>
-                    <span className="ml-1 lg:text-xl">{nft.price} ETH</span>
+                  <div className="flex items-center pl-18">
+                    <div className="eth-btn ">
+                      <div className="eth-icon-wrapper">
+                        <img
+                          className="eth-icon-svg"
+                          src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg"
+                        />
+                      </div>
+                      <p className="btn-text">
+                        <b>{nft.price} ETH</b>
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <p className="mb-4 text-gray-500">{nft.description}</p>
+                <p className="mb-4 text-white-500">{nft.description}</p>
                 <button
-                  className="text-white bg-blue-600 p-4 rounded-md w-full uppercase"
+                  className="text-white bg-red-800 p-4 rounded-md w-full uppercase"
                   onClick={() => buyNft(nft)}
                 >
                   Buy NFT

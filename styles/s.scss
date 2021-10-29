@@ -1,0 +1,54 @@
+.trigger {
+  overflow: hidden;
+}
+.trigger input[type="checkbox"] {
+  display: none;
+}
+.trigger .like:before,
+.like:after {
+  background: red;
+  border-radius: 12px 12px 0 0;
+  content: "";
+  height: 40px;
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+  transition: all 0.25s ease;
+  width: 24px;
+}
+.trigger .like:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+}
+
+.trigger:checked .like {
+  background: #06723e;
+  border-radius: 6px 6px 0 0;
+  width: 12px;
+}
+.trigger:checked .like:before {
+  height: 20px;
+  left: 32px;
+  top: 40px;
+}
+.trigger:checked .like:after {
+  left: 20px;
+  top: 20px;
+}
+
+input[type="checkbox"] ~ .text {
+  color: #fff;
+  font-family: "Gloria Hallelujah";
+  font-size: 24px;
+  position: absolute;
+  left: 58px;
+  top: 14px;
+  opacity: 1;
+}
+
+input[type="checkbox"]:checked ~ .text {
+  opacity: 0;
+}

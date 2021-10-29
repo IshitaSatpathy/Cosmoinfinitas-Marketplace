@@ -77,12 +77,17 @@ function MyApp({ Component, pageProps }) {
               </Link>
               <Link href="/my-assets">
                 <a className="nav-link scrollto">
-                  <b>MY NFT</b>
+                  <b>MY NFT 'S</b>
                 </a>
               </Link>
               <Link href="/creator-dashboard">
                 <a className="nav-link scrollto">
                   <b>CREATORS DASHBOARD</b>
+                </a>
+              </Link>
+              <Link href="/creator-dashboard">
+                <a className="nav-link scrollto">
+                  <b>FAVOURITES</b>
                 </a>
               </Link>
             </ul>
@@ -99,6 +104,7 @@ function MyApp({ Component, pageProps }) {
       <Script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" />
       <Script src="assets/vendor/swiper/swiper-bundle.min.js" />
       <Script src="assets/js/main.js" />
+      <Script src="assets/js/like.js" />
     </>
   );
 }
