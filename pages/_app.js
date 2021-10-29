@@ -77,7 +77,7 @@ function MyApp({ Component, pageProps }) {
               </Link>
               <Link href="/my-assets">
                 <a className="nav-link scrollto">
-                  <b>MY NFT 'S</b>
+                  <b>MY NFT </b>
                 </a>
               </Link>
               <Link href="/creator-dashboard">

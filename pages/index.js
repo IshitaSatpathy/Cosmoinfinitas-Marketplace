@@ -14,14 +14,12 @@ const s = {
   textAlign: "center",
 };
 
-function LikeBtn({likeCount}) {
+function LikeBtn({ likeCount }) {
   const [checked, setChecked] = useState(false);
   return (
     <div className="flex items-center">
-                    
-              
       <input type="checkbox" className={`checkbox`} checked={checked} />
-      <label for="checkbox">
+      <label htmlFor="checkbox">
         <svg
           id="heart-svg"
           viewBox="467 392 58 57"
@@ -30,14 +28,16 @@ function LikeBtn({likeCount}) {
           <g
             id="Group"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             transform="translate(467 392)"
           >
             <path
               d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
               id="heart"
               fill="#AAB8C2"
-              onClick={() => {  setChecked(!checked) }}
+              onClick={() => {
+                setChecked(!checked);
+              }}
             />
             <circle
               id="main-circ"
@@ -46,7 +46,9 @@ function LikeBtn({likeCount}) {
               cx="29.5"
               cy="29.5"
               r="1.5"
-              onClick={() => {  setChecked(!checked) }}
+              onClick={() => {
+                setChecked(!checked);
+              }}
             />
 
             <g id="grp7" opacity="0" transform="translate(7 6)">
@@ -86,7 +88,9 @@ function LikeBtn({likeCount}) {
           </g>
         </svg>
       </label>
-      <span className="ml-1 lg:text-xl ">{checked ? likeCount + 1 : likeCount}</span>
+      <span className="ml-1 lg:text-xl ">
+        {checked ? likeCount + 1 : likeCount}
+      </span>
     </div>
   );
 }
@@ -189,8 +193,7 @@ export default function Home() {
                   </h3>
                 </div>
                 <div className="flex justify-between mt-2 mb-4 text-gray-500">
-                  <LikeBtn likeCount={ 0}/>
-                  
+                  <LikeBtn likeCount={0} />
 
                   <div className="flex items-center pl-18">
                     <div className="eth-btn ">
