@@ -242,6 +242,7 @@ h1 {
   width: 18px !important;
   height: 18px !important;
   user-select: none;
+  padding-left: 10px;
 }
 .eth-btn .btn-text {
   float: right;

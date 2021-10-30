@@ -185,6 +185,12 @@ export default function Home() {
                   alt="Recipe Title"
                 />
               </div>
+              <div>
+                <h3 className="content-end text-gray-400 text-xl justify-items-end pl-5 pt-2">
+                  Seller Address:
+                </h3>
+                <p className="text-xs pt-2 pl-7">{nft.seller}</p>
+              </div>
               <div className="p-4">
                 <div className="grid grid-cols-2 gap-4 ">
                   <h2 className="text-2xl text-green-400">{nft.name}</h2>
@@ -192,6 +198,7 @@ export default function Home() {
                     Price:
                   </h3>
                 </div>
+
                 <div className="flex justify-between mt-2 mb-4 text-gray-500">
                   <LikeBtn likeCount={0} />
 
