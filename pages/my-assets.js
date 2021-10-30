@@ -60,32 +60,32 @@ export default function MyAssets() {
           {nfts.map((nft, i) => (
             <div
               key={i}
-              class="bg-gray-800 rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-110"
+              className="bg-gray-800 rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-110"
             >
               <a href="#">
-                <div class="relative">
+                <div className="relative">
                   <img
-                    class="w-full h-48"
+                    className="w-full h-48"
                     src={nft.image}
                     alt="Sunset in the mountains"
                   />
                 </div>
               </a>
-              <div class="px-6 py-4">
+              <div className="px-6 py-4">
                 <a
                   href="#"
-                  class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out"
+                  className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out"
                 >
                   {nft.name}
                 </a>
-                <p class="text-gray-500 text-sm">{nft.description}</p>
+                <p className="text-gray-500 text-sm">{nft.description}</p>
               </div>
-              <div class="px-6 py-4 flex flex-row items-center">
+              <div className="px-6 py-4 flex flex-row items-center">
                 <span
                   href="#"
-                  class="py-1 text-sm font-regular text-white-900 mr-1 flex flex-row items-center"
+                  className="py-1 text-sm font-regular text-white-900 mr-1 flex flex-row items-center"
                 >
-                  <span class="ml-1 mb-2">
+                  <span className="ml-1 mb-2">
                     <b>Price:</b>{" "}
                   </span>
                   <div className="eth-btn pb-10">
