@@ -180,7 +180,7 @@ export default function Home() {
             >
               <div>
                 <img
-                  className="w-full h-48 object-fill"
+                  className="w-full h-50 object-fill"
                   src={nft.image}
                   alt="Recipe Title"
                 />
