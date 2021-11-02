@@ -191,15 +191,15 @@ export default function Home() {
                 </h3>
                 <p className="text-xs pt-2 pl-7">{nft.seller}</p>
               </div>
-              <div className="p-4">
+              <div className="p-2">
                 <div className="grid grid-cols-2 gap-4 ">
-                  <h2 className="text-2xl text-green-400">{nft.name}</h2>
+                  <h2 className="text-2sm text-green-400 pl-2">{nft.name}</h2>
                   <h3 className="content-end text-gray-400 text-xl justify-items-end pl-20">
                     Price:
                   </h3>
                 </div>
 
-                <div className="flex justify-between mt-2 mb-4 text-gray-500">
+                <div className="flex justify-between mt-2 mb-3 text-gray-500">
                   <LikeBtn likeCount={0} />
 
                   <div className="flex items-center pl-18">
@@ -218,7 +218,7 @@ export default function Home() {
                 </div>
                 <p className="mb-4 text-white-500">{nft.description}</p>
                 <button
-                  className="text-white bg-red-800 p-4 rounded-md w-full uppercase"
+                  className="text-white bg-red-800 p-3 rounded-md w-full uppercase"
                   onClick={() => buyNft(nft)}
                 >
                   Buy NFT
