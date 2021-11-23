@@ -104,7 +104,7 @@ export default function Home() {
   async function loadNFTs() {
     /* create a generic provider and query for unsold market items */
     const provider = new ethers.providers.JsonRpcProvider(
-      "https://rinkeby.infura.io/v3/61c239f5a0a2471a9964f7c2d97392ba"
+      "https://data-seed-prebsc-1-s1.binance.org:8545"
     );
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
     const marketContract = new ethers.Contract(
